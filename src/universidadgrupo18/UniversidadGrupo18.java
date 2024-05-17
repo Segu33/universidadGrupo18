@@ -20,10 +20,10 @@ public class UniversidadGrupo18 {
       
        AlumnoData aD1 = new AlumnoData();
       
-       aD1.guardarAlumno(jose);
-       aD1.guardarAlumno(mauro);
+       //aD1.guardarAlumno(jose);
+      // aD1.guardarAlumno(mauro);
        
-       
+       aD1.buscarAlumno(2);
     }
     
 }

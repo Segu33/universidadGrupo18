@@ -69,7 +69,6 @@ public class AlumnoData {
 
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla alumno");
         }
-
         return alumno;
 
     }
