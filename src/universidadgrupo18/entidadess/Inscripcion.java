@@ -1,5 +1,5 @@
 
-package universidadgrupo18.entidades;
+package universidadgrupo18.entidadess;
 
 
 public class Inscripcion {
