@@ -33,7 +33,7 @@ public class AlumnoData {
             ps.executeUpdate();
             ResultSet resultado = ps.getGeneratedKeys();
             if (resultado.next()) {
-                alumno.setIdAlumno(resultado.getInt("idAlumno"));
+                alumno.setIdAlumno(resultado.getInt(1));
                 JOptionPane.showMessageDialog(null, "Alumno agregado con exito!");
             }
             ps.close();
