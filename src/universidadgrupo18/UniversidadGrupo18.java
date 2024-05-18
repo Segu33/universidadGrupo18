@@ -17,19 +17,19 @@ public class UniversidadGrupo18 {
        
        Alumno jose = new Alumno(4567890, "zuniga", "jose enrique", LocalDate.of(1982, 04, 01), true);
        Alumno mauro = new Alumno(50523698, "ZUÑIGA", "MAURO ENRIQUE", LocalDate.of(2004, 07, 15), true);
-       Alumno esme = new Alumno(51523123, "Castro", "esmeralda", LocalDate.of(2000, 03, 25), false);
+       Alumno esme = new Alumno(8,330303456, "Castroman", "Gigoberta", LocalDate.of(2002, 07, 22), true);
        
        AlumnoData aD1 = new AlumnoData();
        
        //acceso a todos los get y set
-       Alumno alumnoEncontrado = aD1.buscarAlumno(2);
-       System.out.println(alumnoEncontrado.getApellido());
+//       Alumno alumnoEncontrado = aD1.buscarAlumno(2);
+//       System.out.println(alumnoEncontrado.getApellido());
        
       // insert alumnos
       
-       //aD1.guardarAlumno(jose);
-      // aD1.guardarAlumno(mauro);
-      // aD1.guardarAlumno(esme);
+//       aD1.guardarAlumno(jose);
+//       aD1.guardarAlumno(mauro);
+//       aD1.guardarAlumno(esme);
        
       // busqueda de alumno idAlumno
        //System.out.println(aD1.buscarAlumno(8));
@@ -40,6 +40,13 @@ public class UniversidadGrupo18 {
         
         //listar alumnos
         //System.out.println(""+aD1.listarAlumnos());
+        
+      //aD1.modificarAlumno(esme);
+      aD1.eliminarAlumno(8);
+      
+      
+       
+        
         
     }
     
