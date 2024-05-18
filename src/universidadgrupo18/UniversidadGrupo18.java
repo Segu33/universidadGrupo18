@@ -41,8 +41,9 @@ public class UniversidadGrupo18 {
         //listar alumnos
         //System.out.println(""+aD1.listarAlumnos());
         
+        //Modificar y eliminar alumnos
       //aD1.modificarAlumno(esme);
-      aD1.eliminarAlumno(8);
+      //aD1.eliminarAlumno(8);
       
       
        
