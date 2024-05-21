@@ -6,7 +6,9 @@ import java.time.LocalDate;
 import java.time.Month;
 import universidadgrupo18.accesoADatos.AlumnoData;
 import universidadgrupo18.accesoADatos.Conexion;
+import universidadgrupo18.accesoADatos.MateriaData;
 import universidadgrupo18.entidadess.Alumno;
+import universidadgrupo18.entidadess.Materia;
 
 public class UniversidadGrupo18 {
 
@@ -21,9 +23,35 @@ public class UniversidadGrupo18 {
        
        AlumnoData aD1 = new AlumnoData();
        
+       
+       
+       Materia laboratorio2= new Materia (7,"Laboratorio 3", 2023, false);
+       Materia programacion = new Materia ("Programacion", 2024, true);
+       
+       MateriaData mD = new MateriaData ();
+       
+  //Guardado de Materias     
+//       mD.guardarMateria(laboratorio2);
+//       mD.guardarMateria(programacion);
+
+//Busqueda de Materias
+//System.out.println("" + mD.buscarMateria(6));
+
+
+// Modificacion y eliminacion de materia
+
+//mD.eliminarMateria(1);
+//mD.modificarMateria(laboratorio2);
+
+
+//Listar Materias 
+//System.out.println(""+mD.listarMaterias());
+ 
+       
+       
        //acceso a todos los get y set
 //       Alumno alumnoEncontrado = aD1.buscarAlumno(2);
-//       System.out.println(alumnoEncontrado.getApellido());
+//       System.out.pintln(alumnoEncontrado.getApellido());
        
       // insert alumnos
       

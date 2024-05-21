@@ -40,7 +40,7 @@ public class AlumnoData {
             }
             ps.close();
         } catch (SQLException ex) {
-            Logger.getLogger(AlumnoData.class.getName()).log(Level.SEVERE, null, ex);
+       
             JOptionPane.showMessageDialog(null, "Error al Acceder a la tabla alumno");
         }
 
