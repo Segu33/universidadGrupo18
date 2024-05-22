@@ -6,8 +6,10 @@ import java.time.LocalDate;
 import java.time.Month;
 import universidadgrupo18.accesoADatos.AlumnoData;
 import universidadgrupo18.accesoADatos.Conexion;
+import universidadgrupo18.accesoADatos.InscripcionData;
 import universidadgrupo18.accesoADatos.MateriaData;
 import universidadgrupo18.entidadess.Alumno;
+import universidadgrupo18.entidadess.Inscripcion;
 import universidadgrupo18.entidadess.Materia;
 
 public class UniversidadGrupo18 {
@@ -29,6 +31,31 @@ public class UniversidadGrupo18 {
        Materia programacion = new Materia ("Programacion", 2024, true);
        
        MateriaData mD = new MateriaData ();
+       
+       //GUARDANDO INSCRIPCION
+       
+//       Alumno jo = aD1.buscarAlumno(6);
+//       Materia progra = mD.buscarMateria(6);
+//       
+//       Inscripcion insc = new Inscripcion(8.5 ,jo, progra);
+//       
+       InscripcionData iD = new InscripcionData();
+//       
+//       iD.guardarInscripcion(insc);
+       
+       //ACTUALIZANDO NOTA 
+       
+       //iD.actualizarNota(9.5, 6, 6);
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
   //Guardado de Materias     
 //       mD.guardarMateria(laboratorio2);
@@ -60,16 +87,16 @@ public class UniversidadGrupo18 {
 //       aD1.guardarAlumno(esme);
        
       // busqueda de alumno idAlumno
-       //System.out.println(aD1.buscarAlumno(8));
-        //aD1.buscarAlumno(8);
+      //System.out.println(aD1.buscarAlumno(8));
+      //aD1.buscarAlumno(8);
         
-        //busqueda por dni
-        //System.out.println(""+aD1.buscarAlumnoPorDni(50523698));
+      //busqueda por dni
+      //System.out.println(""+aD1.buscarAlumnoPorDni(50523698));
         
-        //listar alumnos
-        //System.out.println(""+aD1.listarAlumnos());
+      //listar alumnos
+      //System.out.println(""+aD1.listarAlumnos());
         
-        //Modificar y eliminar alumnos
+      //Modificar y eliminar alumnos
       //aD1.modificarAlumno(esme);
       //aD1.eliminarAlumno(8);
       
