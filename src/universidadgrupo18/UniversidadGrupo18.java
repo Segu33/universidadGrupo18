@@ -47,8 +47,13 @@ public class UniversidadGrupo18 {
        
        //iD.actualizarNota(9.5, 6, 6);
        
+       //ELIMINANDO INSCRIPCION
        
+       //iD.borrarInscripcion(3 , 1);
        
+       //LISTANDO ALUMNOS POR MATERIA 
+       
+       //System.out.println(iD.obtenerAlumnosPorMateria(1)+ "\n");
        
        
        
