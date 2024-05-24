@@ -55,10 +55,18 @@ public class UniversidadGrupo18 {
        
        //System.out.println(iD.obtenerAlumnosPorMateria(1)+ "\n");
        
+       //OBTENER INSCRIPCIONES
+//        System.out.println(iD.obtenerInscripciones()+"\n");
+ 
+       //INSCRIPCIONES POR ALUMNO
        
+        //System.out.println(iD.InscripcionesxAlumno(2));
        
+        //MATERIAS CURSADAS
+        //System.out.println(iD.obtenerMateriasCursadas(1)+"\n");
        
-       
+        //MATERIAS NO CURSADAS
+        System.out.println(iD.obtenerMateriasNoCursadas(1)+"\n");
        
        
        
@@ -78,9 +86,7 @@ public class UniversidadGrupo18 {
 
 //Listar Materias 
 //System.out.println(""+mD.listarMaterias());
- 
-       
-       
+
        //acceso a todos los get y set
 //       Alumno alumnoEncontrado = aD1.buscarAlumno(2);
 //       System.out.pintln(alumnoEncontrado.getApellido());
