@@ -66,7 +66,7 @@ public class UniversidadGrupo18 {
         //System.out.println(iD.obtenerMateriasCursadas(1)+"\n");
        
         //MATERIAS NO CURSADAS
-        System.out.println(iD.obtenerMateriasNoCursadas(1)+"\n");
+        //System.out.println(iD.obtenerMateriasNoCursadas(1)+"\n");
        
        
        
