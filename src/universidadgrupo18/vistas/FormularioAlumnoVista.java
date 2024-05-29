@@ -58,7 +58,6 @@ public class FormularioAlumnoVista extends javax.swing.JInternalFrame {
 
         jTextField2.setText("jTextField2");
 
-        setMaximizable(true);
         setResizable(true);
 
         jBExit.setText("Salir");
@@ -262,6 +261,13 @@ public class FormularioAlumnoVista extends javax.swing.JInternalFrame {
 
     private void jBDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDeleteActionPerformed
         // TODO add your handling code here:
+        if(alumnoActual!=null){
+            aluData.eliminarAlumno(alumnoActual.getIdAlumno());
+            alumnoActual=null;
+            limpiarCampos();
+        }else{
+        JOptionPane.showMessageDialog(this,"no hay alumno seleccionado");
+        }
     }//GEN-LAST:event_jBDeleteActionPerformed
 
     private void jBSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSaveActionPerformed
@@ -279,6 +285,7 @@ public class FormularioAlumnoVista extends javax.swing.JInternalFrame {
             boolean estado = jRBstate.isSelected();
             if (alumnoActual == null) {
                 alumnoActual = new Alumno(dni, apellido, nombre , fechanac, estado);
+                aluData.guardarAlumno(alumnoActual);
             } else {
                 alumnoActual.setDni(dni);
                 alumnoActual.setApellido(apellido);
@@ -294,6 +301,7 @@ public class FormularioAlumnoVista extends javax.swing.JInternalFrame {
 
     private void jBExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExitActionPerformed
         // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_jBExitActionPerformed
 
     private void limpiarCampos(){

@@ -51,7 +51,7 @@ public class menú extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         aluPorMat = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
+        jMexit = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -132,8 +132,13 @@ public class menú extends javax.swing.JFrame {
 
         jMenuBar1.add(aluPorMat);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/salida.png"))); // NOI18N
-        jMenuBar1.add(jMenu5);
+        jMexit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/salida.png"))); // NOI18N
+        jMexit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMexitActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(jMexit);
 
         setJMenuBar(jMenuBar1);
 
@@ -223,6 +228,11 @@ public class menú extends javax.swing.JFrame {
         escritorio.add(notas);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
+    private void jMexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMexitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMexitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -264,13 +274,13 @@ public class menú extends javax.swing.JFrame {
     private javax.swing.JMenu aluPorMat;
     private javax.swing.JMenu alumno;
     private javax.swing.JDesktopPane escritorio;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenu jMexit;
     private javax.swing.JMenu materia;
     private javax.swing.JMenu notas;
     // End of variables declaration//GEN-END:variables
