@@ -19,7 +19,7 @@ public class Inscripcion {
         this.materia = materia;
     }
 
-    public Inscripcion(double nota, Alumno alumno, Materia materia) {
+    public Inscripcion(Alumno alumno, Materia materia, double nota) {
         this.nota = nota;
         this.alumno = alumno;
         this.materia = materia;

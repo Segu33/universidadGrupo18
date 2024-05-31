@@ -38,6 +38,7 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         initComponents();
         
         aData = new AlumnoData();
+        insData = new InscripcionData();
         listaA =aData.listarAlumnos();
         modelo = new DefaultTableModel();
         cargaAlumnos();
@@ -67,6 +68,12 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
 
         jLabel2.setText("Seleccione un Alumno");
+
+        jCBalumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCBalumnoActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("LISTADO DE MATERIA");
 
@@ -105,8 +112,18 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         });
 
         jBanular.setText("Anular Inscripcion");
+        jBanular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBanularActionPerformed(evt);
+            }
+        });
 
         jBinscribir.setText("Inscribir");
+        jBinscribir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBinscribirActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("FORMULARIO DE INSCRIPCION");
 
@@ -224,6 +241,39 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         jBinscribir.setEnabled(true);
     }//GEN-LAST:event_jRBnoinsActionPerformed
 
+    private void jBinscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBinscribirActionPerformed
+        // TODO add your handling code here:
+        int filaSeleccionada = jTlistains.getSelectedRow();
+        
+        if(filaSeleccionada!=-1){
+        Alumno a=(Alumno)jCBalumno.getSelectedItem();
+        int idMateria = (Integer)modelo.getValueAt(filaSeleccionada,0);
+        String nombreMateria = (String)modelo.getValueAt(filaSeleccionada,1);
+        int anio = (Integer)modelo.getValueAt(filaSeleccionada,2);
+        Materia m= new Materia(idMateria,nombreMateria,anio,true);
+        Inscripcion i=new Inscripcion(a,m,0);
+        insData.guardarInscripcion(i);
+        borrarFilaTabla();
+        }
+        
+    }//GEN-LAST:event_jBinscribirActionPerformed
+
+    private void jBanularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBanularActionPerformed
+        // TODO add your handling code here:
+        int filaSeleccionada = jTlistains.getSelectedRow();
+        
+        if(filaSeleccionada!=-1){
+         Alumno a=(Alumno)jCBalumno.getSelectedItem();
+         int idMateria = (Integer)modelo.getValueAt(filaSeleccionada,0);
+         insData.borrarInscripcion(a.getIdAlumno(), idMateria);
+         borrarFilaTabla();
+        }
+    }//GEN-LAST:event_jBanularActionPerformed
+
+    private void jCBalumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBalumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBalumnoActionPerformed
+
     private void cargaAlumnos(){
         for (Alumno aux : listaA) {
             jCBalumno.addItem(aux);
@@ -252,7 +302,7 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
     
     private void cargaDatosNoInscriptas(){
      Alumno selec = (Alumno)jCBalumno.getSelectedItem();
-     listaM = (ArrayList)insData.obtenerMateriasCursadas(selec.getIdAlumno());
+     listaM = (ArrayList)insData.obtenerMateriasNoCursadas(selec.getIdAlumno());
         for (Materia m : listaM) {
             modelo.addRow(new Object[]{m.getIdMateria(),m.getNombre(),m.getAño()});
         }
