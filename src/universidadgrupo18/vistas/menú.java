@@ -33,7 +33,7 @@ public class menú extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ImageIcon icono = new ImageIcon(getClass().getResource("/recursos/fondoo.jpeg"));
+        ImageIcon icono = new ImageIcon(getClass().getResource("/recursos/UNIFONDO.jpg"));
         Image miImagen=icono.getImage();
         escritorio = new javax.swing.JDesktopPane(){
             public void paintComponent(Graphics g){

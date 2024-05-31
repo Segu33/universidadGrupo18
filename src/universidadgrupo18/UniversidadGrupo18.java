@@ -45,7 +45,7 @@ public class UniversidadGrupo18 {
        
        //ACTUALIZANDO NOTA 
        
-       //iD.actualizarNota(9.5, 6, 6);
+       //iD.actualizarNota(8.5, 3, 3);
        
        //ELIMINANDO INSCRIPCION
        
