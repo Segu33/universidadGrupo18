@@ -169,9 +169,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRBstate">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRBstateActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBNew">
           <Properties>

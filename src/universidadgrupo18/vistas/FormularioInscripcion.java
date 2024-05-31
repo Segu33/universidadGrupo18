@@ -246,14 +246,14 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         int filaSeleccionada = jTlistains.getSelectedRow();
         
         if(filaSeleccionada!=-1){
-        Alumno a=(Alumno)jCBalumno.getSelectedItem();
-        int idMateria = (Integer)modelo.getValueAt(filaSeleccionada,0);
-        String nombreMateria = (String)modelo.getValueAt(filaSeleccionada,1);
-        int anio = (Integer)modelo.getValueAt(filaSeleccionada,2);
-        Materia m= new Materia(idMateria,nombreMateria,anio,true);
-        Inscripcion i=new Inscripcion(a,m,0);
-        insData.guardarInscripcion(i);
-        borrarFilaTabla();
+            Alumno a=(Alumno)jCBalumno.getSelectedItem();
+            int idMateria = (Integer)modelo.getValueAt(filaSeleccionada,0);
+            String nombreMateria = (String)modelo.getValueAt(filaSeleccionada,1);
+            int anio = (Integer)modelo.getValueAt(filaSeleccionada,2);
+            Materia m= new Materia(idMateria,nombreMateria,anio,true);
+            Inscripcion i=new Inscripcion(a,m,0);
+            insData.guardarInscripcion(i);
+            borrarFilaTabla();
         }
         
     }//GEN-LAST:event_jBinscribirActionPerformed

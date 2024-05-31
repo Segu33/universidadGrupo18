@@ -81,12 +81,6 @@ public class FormularioAlumnoVista extends javax.swing.JInternalFrame {
             }
         });
 
-        jRBstate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRBstateActionPerformed(evt);
-            }
-        });
-
         jBNew.setText("Nuevo");
         jBNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,10 +221,6 @@ public class FormularioAlumnoVista extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRBstateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBstateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRBstateActionPerformed
-
     private void jBSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSearchActionPerformed
         // TODO add your handling code here:
         try {
@@ -286,6 +276,7 @@ public class FormularioAlumnoVista extends javax.swing.JInternalFrame {
             if (alumnoActual == null) {
                 alumnoActual = new Alumno(dni, apellido, nombre , fechanac, estado);
                 aluData.guardarAlumno(alumnoActual);
+                limpiarCampos();
             } else {
                 alumnoActual.setDni(dni);
                 alumnoActual.setApellido(apellido);
@@ -293,6 +284,7 @@ public class FormularioAlumnoVista extends javax.swing.JInternalFrame {
                 alumnoActual.setFechaNacimiento(fechanac);
                 alumnoActual.setEstado(estado);
                 aluData.modificarAlumno(alumnoActual);
+                limpiarCampos();
             }
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "Debe Ingresar Un DNI Valido!");
@@ -308,7 +300,7 @@ public class FormularioAlumnoVista extends javax.swing.JInternalFrame {
         jTFdni.setText("");
         jTFname.setText("");
         jTFap.setText("");
-        jRBstate.setSelected(false);
+        jRBstate.setSelected(true);
         jDCfecha.setDate(null);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
